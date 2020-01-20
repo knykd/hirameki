@@ -38,4 +38,4 @@
 https://xd.adobe.com/view/f3b9fffb-09d7-4751-70e5-f36d28c61bcd-8588/grid
 
 ## ERD
-https://drive.google.com/drive/folders/1lEuBu47ruqo9pzvW5bboXcUQodHyB2sU
+https://drive.google.com/open?id=1QCyQFqLdDN-0hu5VpFSrG_bU5hjw9CdD
