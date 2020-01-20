@@ -42,6 +42,11 @@ group :development, :test do
   # コード解析
   gem 'rails_best_practices'
   gem 'rubocop-rails'
+  #Rspec
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'webdrivers'
+  gem 'capybara'
 end
 
 group :development do
