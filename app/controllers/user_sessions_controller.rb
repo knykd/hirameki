@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_to root_path, success: t('user_sessions.flash.create.success')
+      redirect_to words_path, success: t('user_sessions.flash.create.success')
     else
       flash.now[:danger] = t 'user_sessions.flash.create.danger'
       render :new
