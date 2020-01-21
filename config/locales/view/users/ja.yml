@@ -1,0 +1,6 @@
+ja:
+  users:
+    new:
+      title: 'ユーザー登録'
+      login: 'ログインページへ'
+      submit: '登録'

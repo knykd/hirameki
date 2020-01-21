@@ -45,6 +45,9 @@ gem 'html2slim'
 gem 'slim'
 gem 'slim-rails'
 
+# i18n
+gem 'rails-i18n', '~> 5.1'
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

@@ -1,16 +1,15 @@
 .login-wrapper
   .row
     .col-md-10.offset-md-1.col-lg-8.offset-lg-2.align-middle.form
-      h1 ユーザー登録
+      h1 = t('.title')
       = form_with model: @user, local: true do |form|
-        = form.label :name
+        = form.label User.human_attribute_name :name
         = form.text_field :name, class: "form-control"
-         i.fas.fa-user
-        = form.label :email
+        = form.label User.human_attribute_name :email
         = form.email_field :email, class: "form-control"
-        = form.label :password
+        = form.label User.human_attribute_name :password
         = form.password_field :password, class: "form-control"
-        = form.label :password_confirmation
+        = form.label User.human_attribute_name :password_confirmation
         = form.password_field :password_confirmation, class: "form-control"
-        = form.submit "登録", class: "btn btn-primary"
-        = link_to "ログインページへ", login_path, class: "login-page"
+        = form.submit t('.submit'), class: "btn btn-primary"
+        = link_to t('.login'), login_path, class: "login-page"
