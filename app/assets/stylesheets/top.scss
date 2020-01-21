@@ -1,8 +1,13 @@
 .top-wrapper {
   background-image: image-url("top.jpg");
-  height: calc(100vh - 134px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
   position: relative;
-  background-position: center;
+  height: 100%;
+  width: 100%;
 
   .top-inner-text {
     position: absolute;
@@ -23,9 +28,11 @@
       font-size: 2.0rem;
     }
   }
+
   .login-content {
     margin-top: 80px;
   }
+
   .btn {
     margin: 10px;
   }

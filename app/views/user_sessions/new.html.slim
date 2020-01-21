@@ -1,0 +1,12 @@
+.login-wrapper
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2.form
+      h1 ログイン
+      = form_with model: @user, local: true do |form|
+        = form.label :email
+        = form.email_field :email, class: "form-control"
+        = form.label :password
+        = form.password_field :password, class: "form-control"
+        = form.submit "ログイン", class: "btn btn-primary"
+      = link_to "登録ページへ", new_user_path, class: "text-center"
+      = link_to "パスワードをお忘れの方はこちら", "#", class: "text-center"

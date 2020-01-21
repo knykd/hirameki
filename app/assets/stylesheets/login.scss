@@ -1,0 +1,19 @@
+.login-wrapper {
+  background-image: image-url("login.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .btn {
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 2.0rem;
+  }
+}
