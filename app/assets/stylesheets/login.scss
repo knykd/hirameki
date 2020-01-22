@@ -1,13 +1,11 @@
 .login-wrapper {
   background-image: image-url("login.jpg");
-  background-position: center center;
+  height: calc(100vh - 134px);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
   position: relative;
-  height: 100%;
+  background-position: center;
   width: 100%;
+  background-size: cover;
 
   .btn {
     margin: 10px;

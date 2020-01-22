@@ -42,3 +42,100 @@ html,body{
 .alert {
   margin: 0px;
 }
+
+.before-login-header {
+  background: #220000;
+}
+
+.login-header {
+  background-size: cover;
+  background: #220000;
+
+  .icon {
+    a {
+      font-size: 1.8em;
+      color: #FFFFFF;
+      font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+      text-align: left;
+      position: relative;
+      padding-left: 30px;
+      margin-left: 50px;
+      margin-bottom: 0;
+    }
+
+    a:first-letter {
+      font-size: 1.8em;
+      color: #FFFFFF;
+    }
+
+    a:before {
+      position: absolute;
+      font-family: "Font Awesome 5 Free";
+      content: "\f0eb";
+      background: #ffca2c;
+      color: white;
+      font-weight: normal;
+      font-size: 20px;
+      border-radius: 50%;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 25px;
+      height: 0;
+      width: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 12px solid #ffca2c;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.text-right {
+  margin:0 0 0 auto;
+
+  .fas {
+    margin: 15px;
+  }
+}
+
+.icon-list {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.footer-contents {
+  background: #220000;
+  padding: 12px;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  padding: 25px;
+}
+
+.navbar-toggler {
+  border-color: #FFFFFF;
+  background-color: #007bFF;
+  margin-right: 20px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.container-fluid {
+  padding: 0;
+}
