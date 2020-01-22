@@ -15,4 +15,5 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
+  validates :reset_password_token, uniqueness: true, allow_nil: true
 end

@@ -9,4 +9,4 @@
         = form.password_field :password, class: "form-control"
         = form.submit t('.login'), class: "btn btn-primary"
       = link_to t('.submit_page'), new_user_path, class: "text-center"
-      = link_to t('.forget_password'), "#", class: "text-center"
+      = link_to t('.forget_password'), new_password_reset_path, class: "text-center"

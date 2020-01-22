@@ -1,0 +1,17 @@
+- content_for(:title, t('.password_reset'))
+.container
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      h1
+        = t('.password_reset')
+      = form_with model: @user, url: password_reset_path(@token), method: :patch, local: true do |f|
+        div
+          = f.label User.human_attribute_name :email
+          = @user.email
+        div
+          = f.label User.human_attribute_name :password
+          = f.password_field :password, class: "form-control"
+        div
+          = f.label User.human_attribute_name :password_confirmation
+          = f.password_field :password_confirmation, class: "form-control"
+        = f.submit t('.update_password'), class: "btn btn-primary"
