@@ -30,9 +30,19 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# Bootstrap4
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+
+# font-awesome
+gem 'font-awesome-sass', '~> 5.4.1'
+
+# slim
+gem 'html2slim'
+gem 'slim'
+gem 'slim-rails'
 
 group :development, :test do
   # デバッガー
