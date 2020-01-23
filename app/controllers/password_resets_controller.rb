@@ -1,5 +1,6 @@
 class PasswordResetsController < ApplicationController
   skip_before_action :require_login, raise: false, only: %i[new create edit update]
+  before_action :set_token_user_from_params, only: %i[edit update]
 
   def new; end
 
@@ -16,12 +17,10 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-    set_token_user_from_params
     not_authenticated if @user.blank?
   end
 
   def update
-    set_token_user_from_params
     not_authenticated if @user.blank?
 
     @user.password_confirmation = params[:user][:password_confirmation]
