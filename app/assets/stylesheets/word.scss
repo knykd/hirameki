@@ -1,0 +1,39 @@
+.word-wrapper {
+  background-image: image-url("word.jpg");
+  height: calc(100vh - 134px);
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+
+  .top-inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+
+    @media screen and (max-width: 767px) {
+      font-size: 2.0rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 100px;
+    }
+  }
+
+  .word-content {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+  }
+
+  .btn {
+    margin: 10px;
+  }
+}

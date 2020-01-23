@@ -23,7 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'sorcery', github: 'sorcery/sorcery'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -43,6 +44,9 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem 'html2slim'
 gem 'slim'
 gem 'slim-rails'
+
+# i18n
+gem 'rails-i18n', '~> 5.1'
 
 group :development, :test do
   # デバッガー
