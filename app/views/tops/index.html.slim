@@ -5,8 +5,6 @@
     p ユーザーにヒラメキを与え、
     p ヒラメいたアイデアを管理出来るサービスです。
 
-  .login-content
-    .row
-      = link_to '新規登録', new_user_path, class: 'btn btn-primary'
-      = link_to 'ログイン', login_path, class: 'btn btn-primary'
-      = link_to 'パスワードを忘れた方はこちら', new_password_reset_path, class: 'btn btn-primary'
+    = link_to '新規登録', new_user_path, class: 'btn btn-primary'
+    = link_to 'ログイン', login_path, class: 'btn btn-primary'
+    = link_to 'パスワードを忘れた方はこちら', new_password_reset_path, class: 'btn btn-primary'
