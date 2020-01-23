@@ -2,7 +2,7 @@ class SorceryCore < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       t.string :email, null: false
-      t.string :crypted_password
+      t.string :crypted_password, null: false
       t.string :salt
       t.string :name, null: false
 
