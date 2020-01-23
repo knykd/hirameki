@@ -53,6 +53,9 @@ gem 'config'
 # decorater
 gem 'draper'
 
+# scraping
+gem 'nokogiri'
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
