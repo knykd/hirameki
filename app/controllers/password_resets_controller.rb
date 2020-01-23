@@ -1,5 +1,6 @@
 class PasswordResetsController < ApplicationController
   skip_before_action :require_login, raise: false, only: %i[new create edit update]
+
   def new; end
 
   def create
