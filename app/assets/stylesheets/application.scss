@@ -139,3 +139,14 @@ html,body{
 .container-fluid {
   padding: 0;
 }
+
+.table {
+  width: 30%;
+  margin-bottom: 0;
+}
+
+tbody {
+    overflow-y: scroll;
+    height: 150px;
+}
+

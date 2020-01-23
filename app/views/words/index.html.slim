@@ -1,9 +1,29 @@
 .word-wrapper
-  .top-inner-text
-    h3 使用方法
-    p 1.アイデアのヒントになりそうなキーワードをワード一覧から選択してストックしよう！
-    p 2.キーワード一覧の入力追加欄からもキーワードのストック可能です！
-    p 3.アイデアを思いついたらアイデア登録しよう！
+  .word-selection
+    table.table.table-blue.table-bordered.word-table
+      thead
+        tr.table-primary
+          th ＃
+          th 単語一覧
+      - 10.times do |num|
+        tbody
+          tr.table-primary
+            th = num + 1
+            td.table-primary = @words.sample.word_name
 
-  .word-content
-    = link_to 'アイデアを登録する', '#', class: 'btn btn-primary'
+    = link_to '#', class: 'select-arrow' do
+      i.fas.fa-arrow-right.fa-5x
+
+    table.table.table-blue.table-bordered.keyword-table
+      thead
+        tr.table-primary
+          th ＃
+          th 単語一覧
+      - 10.times do |num|
+        tbody
+          tr.table-primary
+            th = num + 1
+            td.table-primary = @words.sample.word_name
+
+    .word-content
+      = link_to 'アイデア登録', '#', class: 'btn btn-primary'

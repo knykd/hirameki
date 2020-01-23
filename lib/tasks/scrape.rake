@@ -5,15 +5,15 @@ require 'nokogiri'
 require 'sanitize'
 
 namespace :scrape do
-  desc 'NaverまとめのTechページからタイトルを取得'
-  task :naver_title => :environment do
+  desc 'webページから単語取得'
+  task get_words: :environment do
     texts = []
     # スクレイピングURL
     urls = ['http://matome.naver.jp/tech', 'https://news.yahoo.co.jp/']
 
     urls.each do |url|
       charset = nil
-      html = open(url) do |f|
+      html = URI.parse(url).open do |f|
         charset = f.charset
         f.read
       end
@@ -22,14 +22,18 @@ namespace :scrape do
       doc = Nokogiri::HTML.parse(html, nil, charset)
 
       doc1 = Sanitize.clean(doc)
-      texts << doc1.delete("\n").delete(" ")
+      texts << doc1.delete('\n').delete(' ')
     end
 
-    text = texts.join(", ")
+    text = texts.join(', ')
 
     natto = Natto::MeCab.new
     natto.parse(text) do |n|
-      puts "#{n.surface}: #{n.feature}"
+      part_of_speech_first = n.feature.split(',').first
+      part_of_speech_second = n.feature.split(',').second
+      if part_of_speech_first == '名詞' && part_of_speech_second == '一般'
+        Word.create(word_name: n.surface)
+      end
     end
   end
 end
