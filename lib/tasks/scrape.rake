@@ -1,24 +1,35 @@
 # URLにアクセス用
 require 'open-uri'
+require 'natto'
+require 'nokogiri'
+require 'sanitize'
 
 namespace :scrape do
-    desc 'NaverまとめのTechページからタイトルを取得'
+  desc 'NaverまとめのTechページからタイトルを取得'
   task :naver_title => :environment do
+    texts = []
     # スクレイピングURL
-    url = 'http://matome.naver.jp/tech'
+    urls = ['http://matome.naver.jp/tech', 'https://news.yahoo.co.jp/']
 
-    charset = nil
-    html = open(url) do |f|
-      charset = f.charset # 文字種別取得
-      f.read # htmlを読み変数htmlへ
+    urls.each do |url|
+      charset = nil
+      html = open(url) do |f|
+        charset = f.charset
+        f.read
+      end
+
+      # htmlを解析後オブジェクト作成
+      doc = Nokogiri::HTML.parse(html, nil, charset)
+
+      doc1 = Sanitize.clean(doc)
+      texts << doc1.delete("\n").delete(" ")
     end
 
-    # htmlを解析後オブジェクト作成
-    doc = Nokogiri::HTML.parse(html, nil, charset)
+    text = texts.join(", ")
 
-    doc.xpath('//li[@class="mdTopMTMList01Item"]').each do |node|
-      # タイトル取得
-      puts node.css('h3').inner_text
+    natto = Natto::MeCab.new
+    natto.parse(text) do |n|
+      puts "#{n.surface}: #{n.feature}"
     end
   end
 end

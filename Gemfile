@@ -56,6 +56,11 @@ gem 'draper'
 # scraping
 gem 'nokogiri'
 
+# 形態素解析
+gem 'natto'
+
+gem 'sanitize'
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
