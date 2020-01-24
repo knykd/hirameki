@@ -32,9 +32,7 @@ namespace :scrape do
       part_of_speech_first = n.feature.split(',').first
       part_of_speech_second = n.feature.split(',').second
       if part_of_speech_first == '名詞' && part_of_speech_second == '一般'
-        if Word.count.zero? || Word.where(word_name: n.surface).empty?
-          Word.create(word_name: n.surface)
-        end
+        Word.find_or_create_by(word_name: n.surface)
       end
     end
   end
