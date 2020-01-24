@@ -3,13 +3,11 @@
     table.table.table-blue.table-bordered.word-table
       thead
         tr.table-primary
-          th ＃
           th 単語一覧
-      - 10.times do |num|
+      - @words.each do |word|
         tbody
           tr.table-primary
-            th = num + 1
-            td.table-primary = @words.sample.word_name
+            td.table-primary = word.word_name
 
     = link_to '#', class: 'select-arrow' do
       i.fas.fa-arrow-right.fa-5x
@@ -17,13 +15,11 @@
     table.table.table-blue.table-bordered.keyword-table
       thead
         tr.table-primary
-          th ＃
-          th 単語一覧
-      - 10.times do |num|
+          th キーワード
+      - @words.each do |word|
         tbody
           tr.table-primary
-            th = num + 1
-            td.table-primary = @words.sample.word_name
+            td.table-primary = word.word_name
 
     .word-content
       = link_to 'アイデア登録', '#', class: 'btn btn-primary'

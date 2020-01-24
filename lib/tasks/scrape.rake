@@ -7,7 +7,9 @@ require 'sanitize'
 namespace :scrape do
   desc 'webページから単語取得'
   task get_words: :environment do
+    Word.destroy_all
     texts = []
+    noun_list = []
     # スクレイピングURL
     urls = ['http://matome.naver.jp/tech', 'https://news.yahoo.co.jp/']
 
@@ -18,7 +20,7 @@ namespace :scrape do
         f.read
       end
 
-      # htmlを解析後オブジェクト作成
+      # html解析後オブジェクト作成
       doc = Nokogiri::HTML.parse(html, nil, charset)
 
       doc1 = Sanitize.clean(doc)
@@ -26,14 +28,17 @@ namespace :scrape do
     end
 
     text = texts.join(', ')
-
     natto = Natto::MeCab.new
     natto.parse(text) do |n|
       part_of_speech_first = n.feature.split(',').first
       part_of_speech_second = n.feature.split(',').second
       if part_of_speech_first == '名詞' && part_of_speech_second == '一般'
-        Word.create(word_name: n.surface)
+        noun_list << n.surface
       end
+    end
+    noun_sample = noun_list.sample(10)
+    noun_sample.each do |noun|
+      Word.create(word_name: noun)
     end
   end
 end
