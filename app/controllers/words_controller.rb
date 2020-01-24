@@ -1,10 +1,7 @@
 class WordsController < ApplicationController
-  require 'rake'
-
   def index
-    Rails.application.load_tasks
-    Rake::Task['scrape:get_words'].execute
-    Rake::Task['scrape:get_words'].clear
-    @words = Word.all
+    word_count = 10
+    random_word_ids = (1...Word.count).to_a.sample(word_count)
+    @words = Word.where(id: random_word_ids)
   end
 end
