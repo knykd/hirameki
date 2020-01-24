@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'sorcery', github: 'sorcery/sorcery'
+gem 'sorcery', '~> 0.12.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -48,6 +48,11 @@ gem 'slim-rails'
 # i18n
 gem 'rails-i18n', '~> 5.1'
 
+gem 'config'
+
+# decorater
+gem 'draper'
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -61,6 +66,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'webdrivers'
   gem 'capybara'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
