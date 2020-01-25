@@ -58,7 +58,6 @@ gem 'nokogiri'
 
 # 形態素解析
 gem 'natto'
-
 gem 'sanitize'
 
 # pagenation
