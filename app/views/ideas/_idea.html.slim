@@ -9,7 +9,7 @@
           = link_to "", edit_idea_path(idea.id), class: "fas fa-pencil-alt"
         li.list-inline-item
           = link_to "", idea_path(idea.id), method: :delete, data: { confirm: t('.confirm') }, class: "fa fa-trash"
-      ul.list-unstyled
+      ul
         li.list
           i.fas.fa-tags.blue
           = idea.category

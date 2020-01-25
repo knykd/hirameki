@@ -1,26 +1,33 @@
 - content_for(:title, t('.word_list'))
 .word-wrapper
   .word-selection
-    table.table.table-blue.table-bordered.word-table
-      thead
-        tr.table-primary
-          th=t('.word')
-        tbody
-      - @words.each do |word|
-          tr.table-primary
-            td.table-primary = word.name
-
-    = link_to '#', class: 'select-arrow' do
-      i.fas.fa-arrow-right.fa-5x
-
-    table.table.table-blue.table-bordered.keyword-table
-      thead
-        tr.table-primary
-          th=t('.keyword')
-        tbody
-      - @words.each do |word|
-          tr.table-primary
-            td.table-primary = word.name
+    ul.container.list-inline
+      li.word-select.list-inline-item
+        table.table.table-blue.table-bordered.word-table
+          thead
+            tr.table-primary
+              th=t('.word')
+            tbody
+          - @words.each do |word|
+              tr.table-primary
+                td.table-primary = word.name
+      li.word-select.list-inline-item
+        ul.container.list.unstyled
+          li.list.right-arrow
+            = link_to '#', class: 'select-arrow', id: 'right-arrow' do
+              i.fas.fa-long-arrow-alt-right.fa-5x
+          li.list.left-arrow
+            = link_to '#', class: 'select-arrow', id: 'left-arrow' do
+              i.fas.fa-long-arrow-alt-left.fa-5x
+      li.word-select.list-inline-item
+        table.table.table-blue.table-bordered.keyword-table
+          thead
+            tr.table-primary
+              th=t('.keyword')
+            tbody
+          - @words.each do |word|
+              tr.table-primary
+                td.table-primary = word.name
 
   .word-content
     = link_to t('.create_word'), new_idea_path, class: 'btn btn-primary'
