@@ -1,0 +1,28 @@
+- content_for(:title, t('.idea_detail'))
+.container.pt-5
+  .row.mb-3
+    .col-lg-8.offset-lg-2
+      h1
+        = t('.idea_detail')
+      article.idea
+        .idea-body
+          .row
+            .col-md-12
+              ul.list-unstyled
+                li.list
+                  = @idea.title
+                li.listp
+                  = @idea.category
+              ul.list-inline.justify-content-center[style="float: right;"]
+                li.list-inline-item
+                  = link_to "", edit_idea_path, class: "fas fa-pencil-alt"
+                li.list-inline-item
+                  = link_to "", idea_path(@idea.id), method: :delete, data: { confirm: t('.confirm') }, class: "fa fa-trash"
+              ul.list-inline
+                li.list-inline-item
+                  | by 
+                  = @idea.user.name
+                li.list-inline-item
+                  = l @idea.created_at, format: :short
+          p
+            = @idea.body

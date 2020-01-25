@@ -165,6 +165,18 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.3.0)
     jwt (2.2.1)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -211,6 +223,8 @@ GEM
     parallel (1.19.1)
     parser (2.7.0.2)
       ast (~> 2.4.0)
+    polyamorous (2.3.2)
+      activerecord (>= 5.2.1)
     popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.2)
@@ -254,6 +268,11 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (13.0.1)
+    ransack (2.3.2)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      i18n
+      polyamorous (= 2.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -376,6 +395,7 @@ DEPENDENCIES
   font-awesome-sass (~> 5.4.1)
   html2slim
   jquery-rails
+  kaminari
   letter_opener_web (~> 1.0)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
@@ -385,6 +405,7 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.1)
   rails-i18n (~> 5.1)
   rails_best_practices
+  ransack
   rspec-rails
   rubocop-rails
   sanitize

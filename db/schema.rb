@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_01_24_074043) do
 
   create_table "ideas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "title"
+    t.string "title", null: false
     t.text "body"
     t.string "category"
     t.datetime "created_at", null: false

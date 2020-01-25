@@ -1,8 +1,8 @@
 doctype html
 html
   head
-    title
-      | ヒラメク！
+    meta content="width=device-width, initial-scale=1, maximum-scale=1"
+    title= page_title(yield(:title))
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'

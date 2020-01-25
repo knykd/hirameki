@@ -61,6 +61,12 @@ gem 'natto'
 
 gem 'sanitize'
 
+# pagenation
+gem 'kaminari'
+
+# search
+gem 'ransack'
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

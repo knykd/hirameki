@@ -18,6 +18,7 @@
 @import "top";
 @import "login";
 @import "word";
+@import "idea";
 
 html,body{
   height: 100%;
@@ -117,6 +118,19 @@ html,body{
   padding: 0;
 }
 
+.wrapper {
+  padding-bottom: 48px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer-contents {
   background: #220000;
   padding: 12px;
@@ -150,3 +164,14 @@ tbody {
   height: 150px;
 }
 
+.word-list {
+  margin-right: 20px;
+}
+
+.idea-body {
+  word-break: break-all;
+}
+
+ul.list-unstyled {
+  word-break: break-all;
+}

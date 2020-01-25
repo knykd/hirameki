@@ -1,0 +1,8 @@
+ja:
+  shared:
+    login_header:
+      title: 'ヒラメク！'
+    before_login_header:
+      title: 'ヒラメク！'
+    footer:
+      terms_of_service: '利用規約'
