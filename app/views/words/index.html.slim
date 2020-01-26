@@ -1,16 +1,15 @@
 - content_for(:title, t('.word_list'))
 .word-wrapper
   .word-selection
-    ul.container.list-inline
+    ul.container.list-inline.hoge.word-selection-list
       li.word-select.list-inline-item
         table.table.table-blue.table-bordered.word-table
           thead
             tr.table-primary
               th=t('.word')
-            tbody
-          - @words.each do |word|
-              tr.table-primary
-                td.table-primary = word.name
+          tbody#update-word
+            #default-word
+              = render @words
       li.word-select.list-inline-item
         ul.container.list.unstyled
           li.list.right-arrow
@@ -24,10 +23,12 @@
           thead
             tr.table-primary
               th=t('.keyword')
-            tbody
-          - @words.each do |word|
-              tr.table-primary
-                td.table-primary = word.name
+          tbody
+            = render @words
 
   .word-content
-    = link_to t('.create_word'), new_idea_path, class: 'btn btn-primary'
+    ul.list-inline
+      li.list-inline-item
+        = link_to t('.update_word'), words_path, class: 'btn btn-primary', remote: true
+      li.list-inline-item
+        = link_to t('.create_word'), new_idea_path, class: 'btn btn-primary'

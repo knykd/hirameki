@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
-  has_many :ideas
+  has_many :ideas, dependent: :destroy
 
   validates :password,
             length: { minimum: 3 },
