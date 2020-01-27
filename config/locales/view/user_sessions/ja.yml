@@ -1,6 +1,7 @@
 ja:
   user_sessions:
     new:
+      title: 'ログイン'
       submit_page: '登録ページへ'
       forget_password: 'パスワードをお忘れの方はこちら'
       login: 'ログイン'

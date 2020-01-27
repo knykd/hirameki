@@ -1,0 +1,18 @@
+.col-sm-12.col-md-6.col-lg-4.mb-3
+  .product id="product-id-#{idea.id}"
+  .idea
+    .idea-body
+      h4.idea-title
+        = link_to idea.title, idea_path(idea.id), class: "idea-title"
+      ul.list-inline.justify-content-center[style="float: right;"]
+        li.list-inline-item
+          = link_to "", edit_idea_path(idea.id), class: "fas fa-pencil-alt"
+        li.list-inline-item
+          = link_to "", idea_path(idea.id), method: :delete, data: { confirm: t('.confirm') }, class: "fa fa-trash"
+      ul.list-unstyled
+        li.list
+          i.fas.fa-tags.blue
+          = idea.category
+        li.list
+          i.fa.fa-calendar.blue
+          = l idea.created_at, format: :short
