@@ -3,11 +3,5 @@ class KeywordsController < ApplicationController
 
   def create; end
 
-  def destrooy; end
-
-  private
-
-  def set_word
-    @word = Word.find(word_id: word.id)
-  end
+  def destroy; end
 end
