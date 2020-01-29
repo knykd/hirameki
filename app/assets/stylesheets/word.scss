@@ -21,11 +21,18 @@ table {
 
 table.word-table {
   table-layout: fixed;
+  height: 520px;
   width: 250px;
+  background-color: #FFFFFF;
 }
 
 table.keyword-table {
   table-layout: fixed;
+  height: 520px;
+  width: 250px;
+}
+
+td {
   width: 250px;
 }
 
@@ -35,4 +42,31 @@ td.table-primary {
 
 ul.word-selection-list li {
   vertical-align: middle;
+  max-height: 520px;
+}
+
+li.word-list, li.keyword-list {
+  height: 516px;
+}
+
+thead.scrollehead, tbody.scroll-body {
+  display: block;
+}
+
+thead.scroll-head {
+  width: 250px;
+}
+
+tbody.scroll-body {
+  overflow-y: scroll;
+  max-height: 510px;
+  height: 467px;
+}
+
+.table-color {
+  background-color: #c3d8ff;
+}
+
+.select-color {
+  background-color: #FFFFFF;
 }
