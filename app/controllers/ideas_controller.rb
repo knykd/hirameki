@@ -1,13 +1,12 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: %i[edit update destroy]
+  before_action :set_idea, only: %i[show edit update destroy]
 
   def index
-    @search = Idea.ransack(params[:q])
+    @search = current_user.ideas.ransack(params[:q])
     @ideas = @search.result.page(params[:page]).includes(:user).recent
   end
 
   def show
-    @idea = Idea.find(params[:id])
   end
 
   def new

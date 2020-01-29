@@ -10,6 +10,6 @@ ja:
           password: パスワード
           password_confirmation: パスワード確認
         idea:
-          title: 名前
+          title: タイトル
           category: カテゴリー
           body: メモ

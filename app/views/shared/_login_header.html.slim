@@ -8,17 +8,14 @@ header
       .navbar-nav.text-right
         ul.list-inline.icon-list
           li.list-inline-item
-            = link_to words_path, class: 'word-list icon-list nav-item nav-link' do
+            = link_to words_path, class: 'word-list icon-list nav-item nav-link', id: "word-all" do
               i.far.fa-lightbulb.fa-2x
           li.list-inline-item
-            = link_to ideas_path, class: 'idea-list icon-list nav-item nav-link' do
+            = link_to ideas_path, class: 'idea-list icon-list nav-item nav-link', id: "idea-all" do
               i.fas.fa-clipboard-list.fa-2x
           li.list-inline-item
-            = link_to new_idea_path, class: 'new-idea icon-list nav-item nav-link' do
+            = link_to new_idea_path, class: 'new-idea icon-list nav-item nav-link', id: "new-idea" do
               i.fas.fa-plus-square.fa-2x
-          li.list-inline-item
-            = link_to '#', class: 'user-detail nav-item icon-list nav-link' do
-              i.fas.fa-user-edit.fa-2x
           li.list-inline-item
             = link_to logout_path, method: :delete, class: 'user-logout icon-list nav-item nav-link', id: "logout" do
               i.fas.fa-sign-out-alt.fa-2x
