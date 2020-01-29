@@ -4,9 +4,9 @@
     h1 = t('.login')
     = form_with model: @user, local: true do |form|
       = form.label User.human_attribute_name :email
-      = form.email_field :email, class: "form-control"
+      = form.email_field :email, class: "form-control", id: "login-email"
       = form.label User.human_attribute_name :password
-      = form.password_field :password, class: "form-control"
+      = form.password_field :password, class: "form-control", id: "login-password"
       = form.submit t('.login'), class: "btn btn-primary"
     = link_to t('.submit_page'), new_user_path, class: "text-center"
     = link_to t('.forget_password'), new_password_reset_path, class: "text-center"

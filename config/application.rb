@@ -44,7 +44,13 @@ module Hirameki
       g.assets false
       g.skip_routes false
       g.helper false
-      g.test_framework false
+      g.test_framework :rspec,
+                       model_spec: true,
+                       view_specs: false,
+                       helper_specs: false,
+                       controller_specs: false,
+                       routing_specs: false,
+                       request_specs: false
     end
   end
 end

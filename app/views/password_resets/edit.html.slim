@@ -9,8 +9,8 @@
         = @user.email
       div
         = f.label User.human_attribute_name :password
-        = f.password_field :password, class: "form-control"
+        = f.password_field :password, class: "form-control", id: "password-reset"
       div
         = f.label User.human_attribute_name :password_confirmation
-        = f.password_field :password_confirmation, class: "form-control"
+        = f.password_field :password_confirmation, class: "form-control", id: "password-reset-confirmation"
       = f.submit t('.update_password'), class: "btn btn-primary"

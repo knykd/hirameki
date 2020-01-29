@@ -23,7 +23,7 @@ class PasswordResetsController < ApplicationController
     not_authenticated if @user.blank?
 
     @user.password_confirmation = params[:user][:password_confirmation]
-    if @user&.change_password(params[:user][:password])
+    if @user&.change_password!(params[:user][:password])
       redirect_to login_path, success: t('password_resets.flash.update.success')
     else
       render :edit
