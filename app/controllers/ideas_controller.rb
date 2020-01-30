@@ -6,18 +6,29 @@ class IdeasController < ApplicationController
     @ideas = @search.result.page(params[:page]).includes(:user).recent
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @idea = Idea.new
+    if request.query_parameters.any?
+      word_ids = request.query_parameters.values
+      session[:ids] = word_ids
+      @words = Word.where(id: word_ids)
+    else
+      session[:ids] = nil
+    end
   end
 
   def create
     @idea = current_user.ideas.build(idea_params)
+    if session[:ids].present?
+      @idea.word_ids = session[:ids]
+    end
     if @idea.save
+      session[:ids] = nil
       redirect_to ideas_path, success: t('ideas.flash.create.success')
     else
+      @words = Word.where(id: session[:ids])
       flash.now[:danger] = t 'ideas.flash.create.danger'
       render :new
     end

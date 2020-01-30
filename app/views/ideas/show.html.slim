@@ -26,3 +26,7 @@
                   = l @idea.created_at, format: :short
           p
             = @idea.body
+        - if @idea.words.present?
+          p="キーワード一覧"
+          - @idea.words.each do |word|
+            p= word.name
