@@ -23,6 +23,6 @@
   .word-content
     ul.list-inline
       li.list-inline-item
-        = link_to t('.update_word'), words_path, class: 'btn btn-primary', remote: true
+        = link_to t('.update_word'), words_path(pram: 'dummy'), class: 'btn btn-primary', remote: true
       li.list-inline-item
         = link_to t('.create_word'), '#', class: 'btn btn-primary', id: 'create_word'
