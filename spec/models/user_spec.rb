@@ -15,11 +15,9 @@ RSpec.describe User, type: :model do
   end
 
   it 'メールアドレスと名前は必須であること' do
-    user = build(:user)
-    user.email = nil
-    user.name = nil
+    user = build(:user, email: nil, name: nil)
     user.valid?
-    expect(user.errors[:email]).to include("を入力してください")
-    expect(user.errors[:name]).to include("を入力してください")
+    expect(user.errors[:email]).to include('を入力してください')
+    expect(user.errors[:name]).to include('を入力してください')
   end
 end
