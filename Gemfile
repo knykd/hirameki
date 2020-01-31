@@ -5,8 +5,6 @@ ruby '2.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -59,6 +57,7 @@ gem 'nokogiri'
 # 形態素解析
 gem 'natto'
 gem 'sanitize'
+gem 'mecab' , '0.996'
 
 # pagenation
 gem 'kaminari'
@@ -70,6 +69,8 @@ gem 'ransack'
 gem 'whenever', require: false
 
 group :development, :test do
+  # mysql
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'better_errors'
@@ -90,6 +91,10 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
