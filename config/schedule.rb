@@ -23,8 +23,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/environment')
 # ジョブ実行環境指定
 set :environment, :production
-# 環境変数をwheneverに書き込む
-ENV.each { |k, v| env(k, v) }
 # cronのログの場所
 set :output, "#{Rails.root}/log/cron.log"
 
