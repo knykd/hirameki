@@ -58,6 +58,7 @@ $(function() {
       }
       count = 0;
     }
+    event.preventDefault();
   });
 
   $('#default-keyword').on('click', 'tr', function(event) {
