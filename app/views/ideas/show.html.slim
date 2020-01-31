@@ -26,6 +26,7 @@
                     = @idea.user.name
                   li.list-inline-item
                     = l @idea.created_at, format: :short
+            = @idea.body
           p
         .col-sm-5
           h1=t('.keyword_list')
