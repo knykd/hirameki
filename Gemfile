@@ -5,8 +5,6 @@ ruby '2.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -23,7 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'sorcery', '~> 0.12.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,7 +43,34 @@ gem 'html2slim'
 gem 'slim'
 gem 'slim-rails'
 
+# i18n
+gem 'rails-i18n', '~> 5.1'
+
+gem 'config'
+
+# decorater
+gem 'draper'
+
+# scraping
+gem 'nokogiri'
+
+# 形態素解析
+gem 'natto'
+gem 'sanitize'
+gem 'mecab' , '0.996'
+
+# pagenation
+gem 'kaminari'
+
+# search
+gem 'ransack'
+
+# Background Job
+gem 'whenever', require: false
+
 group :development, :test do
+  # mysql
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'better_errors'
@@ -57,6 +83,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'webdrivers'
   gem 'capybara'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
@@ -64,6 +91,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

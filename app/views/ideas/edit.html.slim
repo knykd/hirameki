@@ -1,0 +1,8 @@
+.idea-wrapper
+  .idea-table
+    = render "form", idea: @idea, words: @words
+  .idea-table
+    - if @idea.words.present?
+      h1="キーワード一覧"
+      - @idea.words.each do |word|
+        p= word.name

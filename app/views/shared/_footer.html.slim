@@ -1,2 +1,6 @@
 footer
-  .footer-contents
+  .nav.navbar.icon-list.footer-contents
+    .text-right.footer-text
+      | #{t('.copyright')}
+      /* TODO 必要であれば */
+        = link_to t('.terms_of_service'), '#'

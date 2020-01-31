@@ -1,10 +1,10 @@
 .top-wrapper
   .top-inner-text
-    h1 ヒラメク！
-    p「ヒラメク！」は、ランダムにワードを表示し、
-    p ユーザーにヒラメキを与え、
-    p ヒラメいたアイデアを管理出来るサービスです。
+    h1=t('.title')
+    p=t('.text1')
+    p=t('.text2')
+    p=t('.text3')
 
-    .login-content
-      = link_to '新規登録', '#', class: 'btn btn-primary'
-      = link_to 'パスワードを忘れた方はこちら', '#', class: 'btn btn-primary'
+    = link_to t('.create_user'), new_user_path, class: 'btn btn-primary'
+    = link_to t('.login'), login_path, class: 'btn btn-primary'
+    = link_to t('.reset_password'), new_password_reset_path, class: 'btn btn-primary'

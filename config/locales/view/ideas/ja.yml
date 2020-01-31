@@ -1,0 +1,37 @@
+ja:
+  ideas:
+    index:
+      idea_list: 'アイデア一覧'
+      search: '検索'
+      search_word: '検索ワード'
+      no_idea: 'アイデアが登録されていません'
+    show:
+      keyword_list: 'キーワード一覧'
+      no_keyword: 'キーワードはありません'
+      idea_detail: 'アイデア詳細'
+      confirm: '削除しますか？'
+    edit:
+      keyword_list: 'キーワード一覧'
+      no_keyword: 'キーワードはありません'
+    form:
+      edit_idea: 'アイデア編集'
+      submit: '登録'
+      new_idea: 'アイデア登録'
+      title: 'タイトル'
+      body: 'メモ'
+      category: 'カテゴリー'
+      submit: '登録'
+      create_idea: 'アイデア登録'
+      keyword_list: 'キーワード一覧'
+      no_keyword: 'キーワードはありません'
+    idea:
+      confirm: '削除しますか？'
+    flash:
+      create:
+        success: 'アイデアの登録が完了しました'
+        danger: 'アイデアを登録できませんでした'
+      edit:
+        success: 'アイデアを更新しました'
+        danger: 'アイデアを更新できませんでした'
+      destroy:
+        success: 'アイデアを削除しました'

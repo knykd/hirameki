@@ -1,0 +1,24 @@
+.container.pt-3
+  h1
+    = t('.idea_list')
+  .row
+    .col-lg-10.offset-lg-1
+      = search_form_for @search do |form|
+        .input-group.mb-3
+          = form.search_field :title_or_category_cont ,class: "form-control", placeholder: t('.search_word')
+          = form.submit t('.search') , class: "btn btn-primary input-group-append"
+  .row
+    .col-12
+      .row
+        - if @ideas.blank?
+          .col-lg-10.offset-lg-1
+            h4
+            center=t('.no_idea')
+            div
+
+        - else
+          .row.idea-list
+            - content_for(:title, t('.idea_list')) 
+            = render @ideas
+          .row
+            = paginate @ideas
