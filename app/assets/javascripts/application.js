@@ -17,6 +17,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+/* TODO: 選択、非選択のclass付け見直し */
 $(function() {
   $('#update-word').on('click', 'td', function() {
     if($(this).hasClass('table-color')) {
