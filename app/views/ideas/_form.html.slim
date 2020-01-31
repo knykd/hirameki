@@ -14,3 +14,7 @@
           = form.label Idea.human_attribute_name :body
           = form.text_area :body, class: "form-control", id: "idea_body", raw: 10, style: "height: 200px"
           = form.submit t('.submit'), class: "btn btn-primary"
+        - if words.present?
+          h1="キーワード一覧"
+          - words.each do |word|
+            p= word.name
