@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+
+ja:
+  application:
+    flash:
+      not_authenticated:
+        warning: 'ログインして下さい'
