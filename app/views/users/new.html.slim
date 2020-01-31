@@ -4,12 +4,12 @@
     h1 = t('.title')
     = form_with model: @user, local: true do |form|
       = form.label User.human_attribute_name :name
-      = form.text_field :name, class: "form-control"
+      = form.text_field :name, class: "form-control", id: "name"
       = form.label User.human_attribute_name :email
-      = form.email_field :email, class: "form-control"
+      = form.email_field :email, class: "form-control", id: "email"
       = form.label User.human_attribute_name :password
-      = form.password_field :password, class: "form-control"
+      = form.password_field :password, class: "form-control", id: "password"
       = form.label User.human_attribute_name :password_confirmation
-      = form.password_field :password_confirmation, class: "form-control"
+      = form.password_field :password_confirmation, class: "form-control", id: "password-confirmation"
       = form.submit t('.submit'), class: "btn btn-primary"
       = link_to t('.login'), login_path, class: "login-page"

@@ -5,5 +5,5 @@
       = t('.password_reset')
     = form_with url: password_resets_path, method: :post, local: true do |form|
       = form.label User.human_attribute_name :email
-      = form.email_field :email, class: "form-control"
+      = form.email_field :email, class: "form-control", id: "password-reset-email"
       = form.submit t('.send'), class: "btn btn-primary"

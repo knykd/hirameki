@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'sorcery', '~> 0.12.0'
+gem 'sorcery'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
