@@ -1,7 +1,7 @@
 module CreateMyIdea
-  def create_my_idea(current_user)
+  def create_my_idea(user)
     visit login_path
-    fill_in 'login-email', with: current_user.email
+    fill_in 'login-email', with: user.email
     fill_in 'login-password', with: 'password'
     click_button 'ログイン'
 

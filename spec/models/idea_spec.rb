@@ -9,9 +9,8 @@ RSpec.describe Idea, type: :model do
   end
 
   it 'タイトルは必須であること' do
-    idea = build(:idea)
-    idea.title = nil
+    idea = build(:idea, title: nil)
     idea.valid?
-    expect(idea.errors[:title]).to include("を入力してください")
+    expect(idea.errors[:title]).to include('を入力してください')
   end
 end
