@@ -32,8 +32,10 @@ html,body{
   top: 20%;
 }
 
-.form-control {
-  width: 70%;
+.login-wrapper {
+  .form-control {
+    width: 70%;
+  }
 }
 
 .text-center {
@@ -139,7 +141,6 @@ footer {
 
 .footer-text {
   color: #FFFFFF;
-  padding: 25px;
 }
 
 .navbar-toggler {
@@ -175,4 +176,8 @@ tbody {
 
 ul.list-unstyled {
   word-break: break-all;
+}
+
+.form-container {
+  margin-top: 20px;
 }

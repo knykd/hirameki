@@ -1,6 +1,36 @@
 .word-wrapper {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
+}
+
+.word-title {
+  text-align: center;
+
+  h2 {
+    color: #0c3661;
+    font-weight: bold;
+
+    position: relative;
+    padding: 0.5em;
+    background: #a6d3c8;
+    color: white;
+  }
+
+  h2::before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px rgb(149, 158, 155);
+  }
+
+  h5 {
+    color: #1a1969;
+    font-weight: bold;
+    margin: 15px;
+  }
 }
 
 ul.container {
@@ -28,7 +58,7 @@ table.word-table {
 
 table.keyword-table {
   table-layout: fixed;
-  height: 520px;
+  height: 500px;
   width: 250px;
 }
 
@@ -60,7 +90,7 @@ thead.scroll-head {
 tbody.scroll-body {
   overflow-y: scroll;
   max-height: 510px;
-  height: 467px;
+  height: 475px;
 }
 
 .table-color {
@@ -69,4 +99,20 @@ tbody.scroll-body {
 
 .select-color {
   background-color: #FFFFFF;
+}
+
+.select-arrow {
+  margin: 50px;
+}
+
+.word-content {
+  margin-top: 40px;
+}
+
+.update_word {
+  margin-right: 190px;
+}
+
+.create_word {
+  margin-left: 190px;
 }
