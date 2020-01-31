@@ -33,24 +33,11 @@ module Hirameki
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
-
-    config.i18n.load_path += Dir[Rails.root.join('config',
-                                                 'locales',
-                                                 '**',
-                                                 '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :ja
-
     config.generators do |g|
       g.assets false
       g.skip_routes false
       g.helper false
-      g.test_framework :rspec,
-                       model_spec: true,
-                       view_specs: false,
-                       helper_specs: false,
-                       controller_specs: false,
-                       routing_specs: false,
-                       request_specs: false
+      g.test_framework false
     end
   end
 end

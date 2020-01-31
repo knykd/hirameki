@@ -1,19 +1,13 @@
 doctype html
 html
   head
-    meta content="width=device-width, initial-scale=1, maximum-scale=1"
-    title= page_title(yield(:title))
+    title
+      | ヒラメク！
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   body
-    .wrapper
-      - if logged_in?
-        = render 'shared/login_header'
-      - else
-        = render 'shared/before_login_header'
-      = render 'shared/flash_message'
-      .container-fluid
-        = yield
-      = render 'shared/footer'
+    = render 'shared/header'
+    = yield
+    = render 'shared/footer'

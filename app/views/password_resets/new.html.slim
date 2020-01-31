@@ -1,9 +1,0 @@
-- content_for(:title, t('.password_reset'))
-.login-wrapper
-  .col-md-10.offset-md-1.col-lg-8.offset-lg-2.form
-    h1
-      = t('.password_reset')
-    = form_with url: password_resets_path, method: :post, local: true do |form|
-      = form.label User.human_attribute_name :email
-      = form.email_field :email, class: "form-control", id: "password-reset-email"
-      = form.submit t('.send'), class: "btn btn-primary"

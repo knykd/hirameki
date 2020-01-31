@@ -1,3 +1,0 @@
-password_reset:
-  host: 'localhost:3000'
-  default_email: 'from@example.com'
