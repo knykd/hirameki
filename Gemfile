@@ -66,6 +66,9 @@ gem 'kaminari'
 # search
 gem 'ransack'
 
+# Background Job
+gem 'whenever', require: false
+
 group :development, :test do
   # デバッガー
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
