@@ -57,6 +57,7 @@ gem 'nokogiri'
 # 形態素解析
 gem 'natto'
 gem 'sanitize'
+gem 'mecab' , '0.996'
 
 # pagenation
 gem 'kaminari'
