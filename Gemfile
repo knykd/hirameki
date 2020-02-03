@@ -55,9 +55,9 @@ gem 'draper'
 gem 'nokogiri'
 
 # 形態素解析
-gem 'mecab' , '0.996'
-gem 'natto'
-gem 'sanitize'
+# gem 'mecab' , '0.996'
+# gem 'natto'
+# gem 'sanitize'
 
 # pagenation
 gem 'kaminari'
