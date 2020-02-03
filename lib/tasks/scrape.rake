@@ -1,4 +1,4 @@
- URLにアクセス用
+ # URLにアクセス用
  require 'open-uri'
  require 'natto'
  require 'nokogiri'
