@@ -1,6 +1,6 @@
 # ヒラメク！
 https://idea-hirameku.herokuapp.com/
-[![Image from Gyazo](https://i.gyazo.com/d8c463d69c70829a8d3d2410ee220316.png)](https://gyazo.com/d8c463d69c70829a8d3d2410ee220316)
+[![Image from Gyazo](https://i.gyazo.com/696a90ce7c1b3da117cc476c56015616.png)](https://gyazo.com/696a90ce7c1b3da117cc476c56015616)
 
 ## サービス概要
 アイデアを出したいが、アイデアを思いつかない人の為に、<br>
