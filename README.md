@@ -1,5 +1,6 @@
 # ヒラメク！
 https://idea-hirameku.herokuapp.com/
+[![Image from Gyazo](https://i.gyazo.com/d8c463d69c70829a8d3d2410ee220316.png)](https://gyazo.com/d8c463d69c70829a8d3d2410ee220316)
 
 ## サービス概要
 アイデアを出したいが、アイデアを思いつかない人の為に、<br>
@@ -15,7 +16,7 @@ https://idea-hirameku.herokuapp.com/
 流行りそうなネーミングを考えたいけど、思い付かない。。<br>
 人気が出そうな面白いシナリオはないだろうか。。<br>
 誕生日やクリスマスのプレゼントは何にしよう。。<br>
-　
+
 このように人によって欲しいアイデアは様々だが、<br>
 アイデアは一生懸命考えたり、机に向かっても思いつかない事がある。
 
