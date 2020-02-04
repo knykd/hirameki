@@ -1,0 +1,3 @@
+password_reset:
+  host: 'https://idea-hirameku.herokuapp.com'
+  default_email: 'from@example.com'
