@@ -1,6 +1,14 @@
 # ヒラメク！
-https://idea-hirameku.herokuapp.com/
+
+https://idea-hirameku.herokuapp.com/<br>
+
+* 下記テストユーザーはログイン可能です<br>
+※ テストユーザーをご使用の際はパスワードやアイデアの変更等はご遠慮下さい<br>
+  メールアドレス: test.idea.hirameku@gmail.com<br>
+  パスワード: test<br>
+
 [![Image from Gyazo](https://i.gyazo.com/696a90ce7c1b3da117cc476c56015616.png)](https://gyazo.com/696a90ce7c1b3da117cc476c56015616)
+
 
 ## サービス概要
 アイデアを出したいが、アイデアを思いつかない人の為に、<br>
@@ -33,3 +41,16 @@ https://idea-hirameku.herokuapp.com/
 
 ## マーケット
 アイデア出しに困っている人
+
+## 使用技術
+Ruby 2.6.4<br>
+Ruby on Rails 5.2.4<br>
+Bootstrap 4.3.1<br>
+System Spec<br>
+
+## 実装機能
+ログイン(sorcery)<br>
+スクレイピング(Mecab+Natto+Nokogiri)<br>
+検索機能(ransack)<br>
+ページネーション(kaminari)<br>
+キーワード抽出(Ajax)<br>
