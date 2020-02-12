@@ -20,5 +20,8 @@
         - if words.present?
           - words.each do |word|
             p= word.name
+        - elsif idea.keywords.present?
+          - idea.keywords.each do |keyword|
+            p= keyword.word.name
         - else
           h5=t('.no_keyword')
