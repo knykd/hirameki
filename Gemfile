@@ -55,9 +55,9 @@ gem 'draper'
 gem 'nokogiri'
 
 # 形態素解析
-gem 'natto'
-gem 'sanitize'
-gem 'mecab' , '0.996'
+# gem 'mecab' , '0.996'
+# gem 'natto'
+# gem 'sanitize'
 
 # pagenation
 gem 'kaminari'
@@ -95,6 +95,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
